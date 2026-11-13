@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shahdol AI - जिला एवं सरकारी योजना पोर्टल</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+ --blue:#123b68;--primary:#1769aa;--bg:#f3f6fb;
+ --card:#fff;--text:#172b43;--muted:#64748b;
+ --green:#16834b;--border:#e2e8f0;
+}
+body{font-family:Arial,"Noto Sans Devanagari",sans-serif;
+ background:var(--bg);color:var(--text);line-height:1.7}
+header{background:linear-gradient(120deg,#102c4d,#1769aa);
+ color:white;padding:22px 5%;position:relative}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.logo{font-size:23px;font-weight:bold}
+nav{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px}
+nav a{color:white;text-decoration:none;font-size:14px}
+.hero{padding:35px 5%;background:linear-gradient(120deg,#164b7c,#2585c4);
+ color:white}
+.hero h1{font-size:clamp(27px,5vw,43px);margin-bottom:10px}
+.hero p{max-width:700px;color:#e4f1ff}
+.container{max-width:1150px;margin:auto;padding:25px 15px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-top:-5px}
+.card{background:var(--card);border:1px solid var(--border);
+ border-radius:13px;padding:18px;margin-bottom:16px}
+.stat{text-align:center}
+.stat strong{font-size:27px;color:var(--primary);display:block}
+.stat span{font-size:13px;color:var(--muted)}
+h2{font-size:23px;margin:25px 0 14px}
+h3{font-size:17px;margin-bottom:8px}
+p{margin:7px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.item{background:white;padding:17px;border:1px solid var(--border);
+ border-radius:12px}
+.item .emoji{font-size:27px}
+.item p{font-size:14px;color:var(--muted)}
+.btn{border:0;background:var(--primary);color:white;padding:11px 17px;
+ border-radius:8px;cursor:pointer;font-size:14px;text-decoration:none;
+ display:inline-block;margin:5px 3px}
+.btn.green{background:var(--green)}
+.btn.light{background:#e8f2fc;color:var(--blue)}
+input,select,textarea{width:100%;padding:12px;border:1px solid #cbd5e1;
+ border-radius:8px;font-size:15px;background:white;color:#172b43}
+label{font-size:14px;font-weight:bold;display:block;margin:12px 0 5px}
+textarea{min-height:90px;resize:vertical}
+#answer{white-space:pre-wrap;line-height:1.9;overflow-wrap:anywhere}
+#status{font-size:13px;color:var(--muted);margin:10px 0}
+.links a{color:var(--primary);display:inline-block;margin:7px 12px 7px 0}
+footer{background:#102c4d;color:white;text-align:center;padding:25px;margin-top:30px}
+small,.muted{color:var(--muted)}
+.tag{display:inline-block;background:#e5f1ff;color:#15548b;
+ padding:4px 9px;border-radius:20px;font-size:12px;margin:3px}
+hr{border:0;border-top:1px solid var(--border);margin:15px 0}
+@media(max-width:600px){nav{gap:11px}.hero{padding:28px 5%}}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="top">
+  <div class="logo">🏛️ SHAHDOL AI</div>
+  <span>मेरा जिला – मेरा गौरव</span>
+ </div>
+ <nav>
+  <a href="#home">होम</a>
+  <a href="#district">जिला जानकारी</a>
+  <a href="#places">पर्यटन</a>
+  <a href="#schemes">सरकारी योजनाएँ</a>
+  <a href="#ai">AI सहायक</a>
+  <a href="#contact">संपर्क</a>
+ </nav>
+</header>
+
+<section class="hero" id="home">
+ <h1>अपना शहडोल, अपनी पहचान ❤️</h1>
+ <p>शहडोल जिले की जानकारी, सरकारी सेवाएँ, केंद्र एवं मध्य प्रदेश की योजनाएँ और AI की सहायता अब एक ही वेबसाइट पर।</p>
+ <a class="btn green" href="#district">जिला देखें</a>
+ <a class="btn" href="#schemes">योजनाएँ देखें</a>
+</section>
+
+<main class="container">
+
+<!-- DISTRICT STATS -->
+<div class="stats">
+ <div class="card stat"><strong>5,610</strong><span>क्षेत्रफल (वर्ग किमी)</span></div>
+ <div class="card stat"><strong>10,66,063</strong><span>जनसंख्या (पोर्टल पर प्रकाशित)</span></div>
+ <div class="card stat"><strong>886</strong><span>गाँव (पोर्टल के अनुसार)</span></div>
+ <div class="card stat"><strong>2003</strong><span>जिला विभाजन वर्ष</span></div>
+</div>
+
+<!-- DISTRICT -->
+<section id="district">
+<h2>📍 शहडोल जिले की पूरी जानकारी</h2>
+<div class="card">
+ <h3>शहडोल का परिचय</h3>
+ <p>शहडोल मध्य प्रदेश के उत्तर-पूर्वी भाग में स्थित एक जिला है। शहडोल नगर जिले का मुख्यालय है। यह क्षेत्र पहाड़ियों, जंगलों और प्राकृतिक सुंदरता के लिए जाना जाता है।</p>
+ <p><b>राज्य:</b> मध्य प्रदेश</p>
+ <p><b>जिला मुख्यालय:</b> शहडोल</p>
+ <p><b>भाषाएँ:</b> हिंदी, बघेली और उर्दू (आधिकारिक पोर्टल के अंग्रेजी विवरण के अनुसार)</p>
+ <p><b>जिला विभाजन:</b> 15 अगस्त 2003</p>
+ <a class="btn light" target="_blank" href="https://shahdol.nic.in/">आधिकारिक जिला वेबसाइट</a>
+</div>
+
+<div class="grid">
+ <div class="item"><div class="emoji">🏢</div><h3>प्रशासन</h3><p>कलेक्ट्रेट, जिला प्रशासन, जिला पंचायत, नगर निकाय एवं सरकारी विभाग।</p></div>
+ <div class="item"><div class="emoji">🌳</div><h3>प्राकृतिक संपदा</h3><p>वन, पहाड़ियाँ, नदियाँ और प्राकृतिक क्षेत्र।</p></div>
+ <div class="item"><div class="emoji">🚆</div><h3>रेलवे एवं परिवहन</h3><p>शहडोल रेलवे स्टेशन और सड़क परिवहन की जानकारी।</p></div>
+ <div class="item"><div class="emoji">🏥</div><h3>स्वास्थ्य</h3><p>सरकारी अस्पताल, मेडिकल कॉलेज, स्वास्थ्य केंद्र एवं सेवाएँ।</p></div>
+ <div class="item"><div class="emoji">🏫</div><h3>शिक्षा</h3><p>स्कूल, कॉलेज, विश्वविद्यालय एवं शैक्षणिक संस्थान।</p></div>
+ <div class="item"><div class="emoji">🌾</div><h3>कृषि</h3><p>किसान, फसलें, कृषि विभाग और सरकारी सहायता।</p></div>
+</div>
+
+<h2>🏘️ तहसील, ब्लॉक और गाँव</h2>
+<div class="card">
+ <p>तहसील, विकासखंड, ग्राम पंचायत और गाँवों की नवीनतम आधिकारिक सूची यहाँ से प्राप्त करें।</p>
+ <a class="btn" target="_blank" href="https://shahdol.nic.in/">जिला प्रशासन की जानकारी</a>
+ <a class="btn light" target="_blank" href="https://mpdistricts.nic.in/">मध्य प्रदेश जिला पोर्टल</a>
+ <p class="muted">ध्यान दें: बिना आधिकारिक सूची की पुष्टि किए सभी तहसीलों और गाँवों के नाम नहीं दिखाए गए हैं।</p>
+</div>
+</section>
+
+<!-- PLACES -->
+<section id="places">
+<h2>🏞️ शहडोल के पर्यटन स्थल</h2>
+<div class="grid">
+ <div class="item"><div class="emoji">🛕</div><h3>विराट मंदिर</h3><p>शहडोल के प्रसिद्ध ऐतिहासिक एवं धार्मिक स्थलों में शामिल।</p></div>
+ <div class="item"><div class="emoji">🏝️</div><h3>सारसी आइलैंड</h3><p>प्राकृतिक पर्यटन और मनोरम वातावरण के लिए जाना जाता है।</p></div>
+ <div class="item"><div class="emoji">🙏</div><h3>बूढ़ी माता मंदिर</h3><p>क्षेत्र का प्रसिद्ध धार्मिक स्थल।</p></div>
+ <div class="item"><div class="emoji">⛰️</div><h3>घाटी डोंगरी</h3><p>प्राकृतिक और दर्शनीय स्थान।</p></div>
+ <div class="item"><div class="emoji">🛕</div><h3>पचमठा मंदिर</h3><p>स्थानीय धार्मिक महत्व वाला स्थल।</p></div>
+ <div class="item"><div class="emoji">🏞️</div><h3>लाखबारिया गुफाएँ</h3><p>जिले के दर्शनीय स्थलों में शामिल।</p></div>
+</div>
+<a class="btn" target="_blank" href="https://shahdol.nic.in/en/tourist-places/">सभी पर्यटन स्थल देखें</a>
+</section>
+
+<!-- SCHEMES -->
+<section id="schemes">
+<h2>🇮🇳 भारत एवं मध्य प्रदेश की सरकारी योजनाएँ</h2>
+<div class="card">
+ <h3>योजना खोजें</h3>
+ <p>किसान, विद्यार्थी, महिला, बुजुर्ग, श्रमिक और आम नागरिकों के लिए योजनाओं की जानकारी प्राप्त करें।</p>
+ <div class="grid">
+  <button class="btn light" onclick="ask('किसानों के लिए केंद्र और मध्य प्रदेश की सरकारी योजनाएँ बताओ')">🌾 किसान योजनाएँ</button>
+  <button class="btn light" onclick="ask('विद्यार्थियों के लिए छात्रवृत्ति और शिक्षा योजनाएँ बताओ')">📚 छात्र योजनाएँ</button>
+  <button class="btn light" onclick="ask('महिलाओं के लिए सरकारी योजनाएँ बताओ')">👩 महिला योजनाएँ</button>
+  <button class="btn light" onclick="ask('मध्य प्रदेश में गरीब परिवारों के लिए सरकारी योजनाएँ बताओ')">🏠 गरीब परिवार</button>
+  <button class="btn light" onclick="ask('बुजुर्गों के लिए सरकारी पेंशन योजनाएँ बताओ')">👴 पेंशन योजनाएँ</button>
+  <button class="btn light" onclick="ask('युवाओं के लिए रोजगार और कौशल विकास योजनाएँ बताओ')">💼 रोजगार योजनाएँ</button>
+ </div>
+</div>
+
+<div class="card">
+ <h3>महत्वपूर्ण सरकारी पोर्टल</h3>
+ <div class="links">
+  <a href="https://www.myscheme.gov.in/" target="_blank">MyScheme – सभी योजनाएँ ↗</a>
+  <a href="https://india.gov.in/" target="_blank">भारत सरकार ↗</a>
+  <a href="https://www.mponline.gov.in/" target="_blank">MP Online ↗</a>
+  <a href="https://mp.gov.in/" target="_blank">मध्य प्रदेश सरकार ↗</a>
+  <a href="https://scholarships.gov.in/" target="_blank">राष्ट्रीय छात्रवृत्ति पोर्टल ↗</a>
+  <a href="https://pmkisan.gov.in/" target="_blank">PM किसान ↗</a>
+</div>
+</div>
+</section>
+
+<!-- AI -->
+<section id="ai">
+<h2>🤖 Shahdol AI – सरकारी योजना सहायक</h2>
+<div class="card">
+ <span class="tag">Groq AI</span>
+ <span class="tag">हिंदी सहायक</span>
+ <span class="tag">शहडोल विशेष जानकारी</span>
+
+ <label for="apiKey">Groq API Key</label>
+ <input id="apiKey" type="password" placeholder="अपनी Groq API Key यहाँ डालें">
+ <small>API Key केवल अपने निजी परीक्षण के लिए डालें। इसे किसी के साथ साझा न करें।</small>
+
+ <label for="model">AI मॉडल चुनें</label>
+ <select id="model">
+  <option value="openai/gpt-oss-120b">GPT OSS 120B – Featured Model</option>
+  <option value="llama-3.3-70b-versatile">Llama 3.3 70B</option>
+  <option value="llama-3.1-8b-instant">Llama 3.1 8B</option>
+ </select>
+
+ <label for="question">आप क्या जानना चाहते हैं?</label>
+ <textarea id="question" placeholder="उदाहरण: शहडोल के विद्यार्थियों को कौन-कौन सी छात्रवृत्ति मिल सकती है?"></textarea>
+ <button class="btn green" id="sendBtn" onclick="sendQuestion()">प्रश्न पूछें ➤</button>
+ <button class="btn light" onclick="clearAnswer()">साफ करें</button>
+
+ <div id="status"></div>
+ <hr>
+ <h3>AI का जवाब</h3>
+ <div id="answer">नमस्ते! मैं Shahdol AI हूँ। आप मुझसे जिले और सरकारी योजनाओं के बारे में हिंदी में प्रश्न पूछ सकते हैं।</div>
+</div>
+</section>
+
+<!-- HELPLINES -->
+<section id="contact">
+<h2>☎️ महत्वपूर्ण हेल्पलाइन नंबर</h2>
+<div class="grid">
+ <div class="item"><h3>मुख्यमंत्री हेल्पलाइन</h3><p><b>181</b></p></div>
+ <div class="item"><h3>चाइल्ड हेल्पलाइन</h3><p><b>1098</b></p></div>
+ <div class="item"><h3>महिला हेल्पलाइन</h3><p><b>1091</b></p></div>
+ <div class="item"><h3>पुलिस</h3><p><b>112</b></p></div>
+ <div class="item"><h3>एम्बुलेंस</h3><p><b>108</b></p></div>
+</div>
+<a class="btn" target="_blank" href="https://shahdol.nic.in/en/contact-us/">शहडोल प्रशासन से संपर्क करें</a>
+</section>
+
+<div class="card">
+ <h3>⚠️ जरूरी सूचना</h3>
+ <p>यह पोर्टल जानकारी देने के लिए है। सरकारी योजनाओं की पात्रता, राशि, दस्तावेज, आवेदन की तारीख और नियम बदल सकते हैं। आवेदन करने से पहले संबंधित सरकारी वेबसाइट पर जानकारी की पुष्टि करें। AI का जवाब अंतिम सरकारी आदेश नहीं है।</p>
+</div>
+
+</main>
+
+<footer>
+ <h3>🏛️ SHAHDOL AI</h3>
+ <p>मेरा जिला – मेरा गौरव | डिजिटल शहडोल</p>
+ <small style="color:#cbd5e1">यह एक स्वतंत्र सूचना पोर्टल है, सरकारी वेबसाइट नहीं।</small>
+ <p>© 2026 Shahdol AI Portal</p>
+</footer>
+
+<script>
+const SYSTEM_PROMPT = `
+आप Shahdol AI नाम के हिंदी सरकारी सूचना सहायक हैं।
+आपका काम शहडोल जिला मध्य प्रदेश और भारत तथा मध्य प्रदेश की सरकारी योजनाओं की जानकारी सरल हिंदी में देना है।
+
+नियम:
+1. हमेशा सरल हिंदी में उत्तर दें।
+2. शहडोल से जुड़े सवालों में शहडोल जिले को प्राथमिकता दें।
+3. योजना का नाम, लाभ, पात्रता, दस्तावेज और आवेदन प्रक्रिया अलग-अलग समझाएँ।
+4. केंद्र और मध्य प्रदेश की योजनाओं में स्पष्ट अंतर बताएं।
+5. गलत या अपुष्ट राशि, तारीख, पात्रता या सरकारी आदेश न गढ़ें।
+6. जानकारी निश्चित न हो तो साफ कहें कि आधिकारिक पोर्टल पर जाँच जरूरी है।
+7. आवेदन के लिए myscheme.gov.in, india.gov.in, mp.gov.in और संबंधित विभाग की वेबसाइट बताएं।
+8. नागरिकों से OTP, पासवर्ड, बैंक PIN या निजी दस्तावेज चैट में साझा करने को न कहें।
+9. आप लाइव सरकारी डेटाबेस से जुड़े होने का दावा न करें।
+10. शहडोल के गाँव, तहसील, अस्पताल, स्कूल या अधिकारियों की सूची अपुष्ट होने पर उसे तथ्य बनाकर न बताएं।
+उत्तर व्यवस्थित और उपयोगी रखें।
+`;
+
+function ask(q){
+ document.getElementById("question").value=q;
+ sendQuestion();
+}
+
+async function sendQuestion(){
+ const key=document.getElementById("apiKey").value.trim();
+ const question=document.getElementById("question").value.trim();
+ const model=document.getElementById("model").value;
+ const answer=document.getElementById("answer");
+ const status=document.getElementById("status");
+ const btn=document.getElementById("sendBtn");
+
+ if(!key){
+  status.textContent="कृपया पहले Groq API Key डालें।";
+  return;
+ }
+ if(!question){
+  status.textContent="कृपया अपना प्रश्न लिखें।";
+  return;
+ }
+
+ btn.disabled=true;
+ btn.textContent="जवाब तैयार हो रहा है...";
+ status.textContent="AI से संपर्क किया जा रहा है...";
+ answer.textContent="कृपया प्रतीक्षा करें...";
+
+ try{
+  const response=await fetch(
+   "https://api.groq.com/openai/v1/chat/completions",
+   {
+    method:"POST",
+    headers:{
+     "Content-Type":"application/json",
+     "Authorization":"Bearer "+key
+    },
+    body:JSON.stringify({
+     model:model,
+     messages:[
+      {role:"system",content:SYSTEM_PROMPT},
+      {role:"user",content:question}
+     ],
+     temperature:0.4,
+     max_completion_tokens:1800
+    })
+   }
+  );
+
+  const data=await response.json();
+
+  if(!response.ok){
+   throw new Error(data.error?.message || "API Error: "+response.status);
+  }
+
+  answer.textContent=data.choices?.[0]?.message?.content
+   || "कोई जवाब नहीं मिला।";
+  status.textContent="जवाब तैयार है ✓ | मॉडल: "+data.model;
+
+ }catch(error){
+  answer.textContent="माफ कीजिए, अभी जवाब नहीं मिल पाया।";
+  status.textContent="त्रुटि: "+error.message;
+ }finally{
+  btn.disabled=false;
+  btn.textContent="प्रश्न पूछें ➤";
+ }
+}
+
+function clearAnswer(){
+ document.getElementById("question").value="";
+ document.getElementById("answer").textContent="अपना अगला प्रश्न पूछें।";
+ document.getElementById("status").textContent="";
+}
+</script>
+
+</body>
+</html>
